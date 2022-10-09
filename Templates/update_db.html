@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<div align="center">
+ <form action="/update_task_db/{{pid}}" method="post">
+ <label for="pid">Project id:</label> <br>
+  <input type="text" id="pid" name="pid" value={{pid}} ><br><br>
+  <label for="project">Project name:</label> <br>
+  <input type="text" id="project" name="project" value="{{project}}" ><br><br>
+  <label for="task">Task:</label><br>
+  <input type="text" id="task" name="task" value="{{task}}" ><br><br>
+ <label for="status">Status:</label>
+  <select name="status" id="status">
+    <option value="Not_started">Not started</option>
+    <option value="In_progress">In progress</option>
+    <option value="Completed">Completed</option>
+    <option value="Delayed">Delayed</option>
+  </select>
+  <br><br>
+
+ <input type="submit" value="Update status">
+  <br><br>
+
+<b>  <a href="/">Main page</a></b>
+     </div>
+{% endblock content %}

@@ -1,1 +1,22 @@
+<!-- home.html -->
+{% extends "layout.html" %}
+{% block content %}
 
+<div align="center"><br>
+
+<button type="button_menu" name="myButton" onClick="location.href='http://127.0.0.1:5000//projects'">Projects list</button>
+    <br>
+
+    <button type="button_menu" name="myButton" onClick="location.href='http://127.0.0.1:5000//add_project'">Add project</button>
+    <br>
+
+    <button type="button_menu" name="myButton" onClick="location.href='http://127.0.0.1:5000//update_status'">Update status</button>
+    <br>
+
+    <button type="button_menu" name="myButton" onClick="location.href='http://127.0.0.1:5000//delete_task'">Delete project</button>
+    <br><br>
+
+<button type="button_menu" name="myButton" onClick="location.href='http://127.0.0.1:5000//'">Main page</button>
+
+</div>
+{% endblock content %}

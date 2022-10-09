@@ -1,0 +1,25 @@
+<!-- layout.html: layout file common for all html files -->
+<html>
+<head>
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+
+    <script
+src="{{ url_for('static', filename='script.js') }}">
+</script>
+    {% if title %}
+<title>{{ title }}</title>
+{% else %}
+<title>Todolist Projects</title>
+{% endif %}
+</head>
+<body>
+<div class="title" align="center">
+<i><strong>
+<p style="font-size:50px">ToDoList Projects</p>
+</i></strong>
+</div>
+<hr/>
+{% block content %}{% endblock %}
+</body>
+</html>

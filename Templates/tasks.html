@@ -1,0 +1,25 @@
+<!-- tasks.html -->
+{% extends "layout.html" %}
+{% block content %}
+<div>Tasks of project <b>{{project_id}}</b>:</div>
+<br>
+<table border="1">
+  <tr>
+    <th>Task</th>
+    <th>Status</th>
+  </tr>
+{% for pid in projects %}
+    {% if projects[pid].project == project_id %}
+<tr>
+    <td>
+         <h4>{{projects[pid].task}} </h4>
+    </td>
+    <td>
+        <h4>{{projects[pid].status}}</h4>
+    </td>
+</tr>
+    {% endif %}
+{% endfor %}
+</table>
+<a href="/">Main page</a>
+{% endblock content %}

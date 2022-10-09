@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<div align="center">
+<form action="{{ url_for('add_project_db')}}" method="post">
+ <label for="id">Project id:</label> <br>
+  <input type="text" id="id" name="id" value="101"><br>
+  <label for="project">Project name:</label> <br>
+  <input type="text" id="project" name="project" value="Web_page"><br>
+  <label for="task">Task:</label><br>
+  <input type="text" id="task" name="task" value="Design"><br>
+ <label for="status">Status:</label><br>
+  <input type="text" id="status" name="status" value="Not_started"><br><br>
+
+ <input type="submit" value="Add project">
+</form> <br>
+<b><a href="/projects">Projects list</a></b>
+ </div>
+{% endblock content %}
